@@ -1,0 +1,5 @@
+nodename: 
+CclassTraining
+
+github repo:
+https://github.com/jenjr803/C_classTraining.git

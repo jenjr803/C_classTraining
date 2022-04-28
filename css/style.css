@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
+    /* 限制box不受padding變形 */
     font-family: '標楷體';
     overflow: hidden;
+    /* 物件超過版面部分隱藏, 預設為auto為超出部分有scroll */
 }
 
 /* body .main*/
@@ -16,7 +18,7 @@
 }
 
 /* 畫線border */
-body>* :not(aside, section),
+body>*:not(aside, section),
 aside>*,
 section>* {
     border: 1px solid lightgray;
@@ -25,7 +27,7 @@ section>* {
 .top{
     flex-basis: 1000px;
     height: 65px;
-    background: lightblue;
+    /* background: lightblue; */
     /*border: 1px */
 }
 
@@ -39,6 +41,36 @@ section>* {
 /* aside header .menu*/
 .menu{
     flex-basis: calc(100% - 25px);
+ 
+}
+
+.menu-header {
+    font-weight: 500;
+    font-size: 24px;
+    color: #FF00FF;
+    margin: 20px auto;
+    text-decoration: underline blue;
+    /* text-decoration-color: black; */
+    /* text-underline-offset: 3px; */
+}
+
+.menu>a{
+    display: block;
+    margin: 10px;
+    /* block斷行 可以調width height
+    inline block 不斷行 可以調witdh height */
+    text-decoration: none;
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+    /* line-height: 35px; */
+    color: #000000;
+    font-size: 16px;
+    background: url("../images/menu1.png") no-repeat;
+}
+
+.menu>a:hover {
+    background: url("../images/menu2.png") no-repeat;
 }
 
 /* aside update */
@@ -53,9 +85,9 @@ section>* {
 /* section */
 .section{
     flex-basis: calc(1000px - 215px);
+    /* height: 500px; */
     display: flex;
     flex-direction: column;
-    background-color: lightgreen;
 }
 
 .marqee{
@@ -79,3 +111,4 @@ section>* {
     color: #000000;
     text-align: center;
 }
+
