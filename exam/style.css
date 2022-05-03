@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    font-family: '標楷體';
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1024px;
+    height: 768px;
+    padding: 0 12px;
+    margin: 8px auto;
+}
+
+body>*:not(aside, section),
+aside>*,
+section>* {
+    border: 1px solid lightgrey;
+}
+
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 215px;
+    height: calc(768px - 65px -20px);
+}
+
+.menu {
+    flex-basis: calc(100% - 25px);
+    text-align: center;
+}
+
+.menu header {
+    font-size: 24px;
+    color: #FF00FF;
+    text-decoration: underline;
+}
+
+.menu>a {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    background-image: url(./images/menu1.png) no-repeat;
+    width: 200px;
+    height: 35px;
+    margin: 10px auto;
+    padding-top: 8px;
+}
+
+.menu>a:hover {
+    background-image: url(./images/menu2.png) no-repeat;
+}
+
+.update {
+    flex-basis: 25px;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(100% - 215px);
+    /* ?為什麼不用打height? */
+}
+
+.marqee {
+    flex-basis: 29px;
+    font-size: 24px;
+    color: #0000FF;
+
+}
+
+.content {
+    flex-basis: calc(100% - 29px);
+
+}
+
+.footer {
+    flex-basis: 1000px;
+    height: 20px;
+
+}
